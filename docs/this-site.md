@@ -14,6 +14,8 @@ From previous attempts at a personal website I DO know that there are some thing
   - I've made sites before with non renewing domain thinking that I would be able to remember, years later to come in and renew with a new debit or credit card.
 - Too many moving parts in general
   - I don't want to maintain, and I want this thing to be working for a long time.
+- broken links
+  - this one is hard
 
 #### What I do want
 What I want to do here is set up a spectrum, not necessarily between "simple" and "complex" but between what I perceive to be differences in the projected personality that comes through in something like a personal website. I think it's missing the point to say that a personal website like [Donald Knuth's](https://www-cs-faculty.stanford.edu/~knuth/) website is "simple" (as well as inaccurate). The list of things not present on a personal website say just as much as what is actually on it. 
@@ -51,4 +53,11 @@ Ok so lets dive in
 first theres aws
 route 53
 cloudfront not really sure why I need cloudfront but if this is the only way to get a green thing in the url next to my name I guess
+
+
+
+ok so we made this repo and uploaded it
+we have a basic webpack setup and we haven't moved on to react yet but maybe the next thing to focus on is how to deploy
+
+I would like a simple deployment scheme for now that will let me push the contents of dist up to the s3 buckets I set up.
 
