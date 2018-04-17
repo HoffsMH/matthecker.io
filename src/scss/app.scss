@@ -1,0 +1,29 @@
+@import 'modules/variables/color';
+@import 'modules/variables/typography';
+
+@import 'partials/typography';
+
+$purple: #8A4D76;
+$primary: $purple;
+@import 'bulma';
+
+body {
+  background: $silver;
+  font-family: 'stencil';
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.reg {
+  font-family: 'stencil';
+  font-size: 40px;
+}
+
+.hello-card {
+  background: #ffffff;
+  min-height: 100vh;
+  h1 {
+    text-align: center;
+  }
+}
