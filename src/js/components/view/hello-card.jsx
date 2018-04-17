@@ -9,7 +9,7 @@ const HelloCard = () => (
         <div className="has-text-centered reg">I am learning about Elixir and Go and elm</div>
         <div className="has-text-centered reg">I enjoy thinking about building human interfaces, devops, people and productivity</div>
         <div className="has-text-centered reg">I have 2 years year of professional experience but more than that fiddling around...</div>
-        <div className="has-text-centered reg">if you don't think thats enough experience to be interested in me </div>
+        <div className="has-text-centered reg">if you don&#39;t think thats enough experience to be interested in me </div>
       </div>
     </div>
   </section>
