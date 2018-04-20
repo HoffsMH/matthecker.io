@@ -1,11 +1,12 @@
+import { Link } from 'react-router-dom';
 import React from 'react';
 
 const Blog = () => (
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="/about.html">
+  <nav className="navbar" role="navigation" aria-label="main navigation">
+    <div className="navbar-brand">
+      <Link className="navbar-item" href="/about" to="/about">
         About
-      </a>
+      </Link>
     </div>
   </nav>
 );

@@ -11,12 +11,16 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/js/index.jsx',
-    about: './src/js/about.jsx',
     styles: './src/scss/app.scss',
   },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
+  },
+
+  devServer: {
+    historyApiFallback: true,
   },
 
   module: {
