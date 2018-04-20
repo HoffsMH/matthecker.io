@@ -8,7 +8,7 @@ const wrapper = document.getElementById('main');
 
 const App = () => (
   <div>
-    <Route path="/" component={Blog} />
+    <Route exact path="/" component={Blog} />
     <Route path="/about" component={HelloCard} />
   </div>
 );
