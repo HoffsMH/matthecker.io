@@ -1,22 +1,11 @@
-import NavBar from '../view/navbar';
 import React from 'react';
-
-window.fetch('https://api.github.com/users/HoffsMH/gists')
-  .then((response) => {
-    return response.json();
-  })
-  .then((json) => {
-    debugger;
-  });
-
-
+import NavBar from '../view/navbar';
+import BlogIndex from './blog-index';
 
 const Blog = () => (
   <div className="is-flex">
     <NavBar />
-    <div>
-      stuff
-    </div>
+    <BlogIndex />
   </div>
 );
 

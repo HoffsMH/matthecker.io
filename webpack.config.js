@@ -10,6 +10,7 @@ const extractSass = new ExtractTextPlugin({
 module.exports = {
   mode: 'development',
   entry: {
+    fetch: 'whatwg-fetch',
     index: './src/js/index.jsx',
     styles: './src/scss/app.scss',
   },
