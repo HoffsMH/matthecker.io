@@ -1,14 +1,23 @@
-import { Link } from 'react-router-dom';
+import NavBar from '../view/navbar';
 import React from 'react';
 
+window.fetch('https://api.github.com/users/HoffsMH/gists')
+  .then((response) => {
+    return response.json();
+  })
+  .then((json) => {
+    debugger;
+  });
+
+
+
 const Blog = () => (
-  <nav className="navbar" role="navigation" aria-label="main navigation">
-    <div className="navbar-brand">
-      <Link className="navbar-item" href="/about" to="/about">
-        About
-      </Link>
+  <div className="is-flex">
+    <NavBar />
+    <div>
+      stuff
     </div>
-  </nav>
+  </div>
 );
 
 export default Blog;

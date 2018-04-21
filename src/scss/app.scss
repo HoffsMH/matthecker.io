@@ -9,14 +9,14 @@ $primary: $purple;
 @import 'bulma';
 
 body {
-  background: $silver;
-  font-family: 'stencil';
+  // background: $silver;
+  @extend .lato;
   min-height: 100%;
   margin: 0;
   padding: 0;
 }
 
-.reg {
+.lato {
   font-family: 'Lato';
 }
 
@@ -30,4 +30,13 @@ body {
   h1 {
     text-align: center;
   }
+}
+
+.flex {
+  flex: 2;
+}
+
+
+.w-20 {
+  width: 20%;
 }
