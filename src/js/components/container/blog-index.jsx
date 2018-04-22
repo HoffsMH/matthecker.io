@@ -12,8 +12,8 @@ class BlogIndexContainer extends React.Component {
 
 
   async componentWillMount() {
-    const blogLinks = _.map(Object.keys(posts), post =>
-      <BlogPostLink {...post} />);
+    const blogLinks = _.map(Object.keys(posts), key =>
+      <BlogPostLink key={key} {...posts[key]} />);
 
     this.setState({ blogLinks });
   }

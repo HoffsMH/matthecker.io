@@ -8,7 +8,7 @@ import HelloCard from './components/view/hello-card';
 const wrapper = document.getElementById('main');
 
 const App = () => (
-  <div>
+  <div className="app-container">
     <Route exact path="/" component={Blog} />
     <Route path="/about" component={HelloCard} />
   </div>
@@ -18,5 +18,3 @@ ReactDOM.render((
   <BrowserRouter>
     <App />
   </BrowserRouter>), wrapper);
-
-console.log(helloWhat);
