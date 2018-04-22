@@ -43,7 +43,16 @@ module.exports = {
           fallback: 'style-loader',
         }),
       },
-      { test: /\.(eot|svg|ttf|woff|woff2)$/, loader: 'file-loader' },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        use: { loader: 'file-loader' },
+      },
+      {
+        test: /\.md$/,
+        use: [
+          { loader: 'file-loader' },
+        ],
+      },
     ],
   },
 
@@ -55,15 +64,9 @@ module.exports = {
       chunks: ['index', 'styles'],
       filename: 'index.html',
     }),
-    new HtmlWebpackPlugin({
-      hash: true,
-      template: './src/about.html',
-      chunks: ['about', 'styles'],
-      filename: 'about.html',
-    }),
   ],
 
   resolve: {
-    extensions: ['.js', '.jsx', '.ttf'],
+    extensions: ['.js', '.jsx', '.ttf', 'md'],
   },
 };

@@ -19,3 +19,4 @@ ReactDOM.render((
     <App />
   </BrowserRouter>), wrapper);
 
+console.log(helloWhat);

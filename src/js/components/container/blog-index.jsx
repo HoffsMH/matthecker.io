@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import BlogPostLink from '../view/blog-post-link';
 import BlogIndex from '../view/blog-index';
-import fetchBlogInfo from '../../lib/fetch-blog-info';
+import posts from '../../../md/posts';
 
 class BlogIndexContainer extends React.Component {
   constructor(props, context) {
@@ -12,18 +12,15 @@ class BlogIndexContainer extends React.Component {
 
 
   async componentWillMount() {
-    const blogInfo = await fetchBlogInfo();
-    const blogLinks = _.map(blogInfo, blogPost =>
-      (<BlogPostLink key={blogPost.id} {...blogPost} />));
+    const blogLinks = _.map(Object.keys(posts), post =>
+      <BlogPostLink {...post} />);
 
     this.setState({ blogLinks });
   }
 
   render() {
-    const { state } = this;
-    return <BlogIndex {...state} />;
+    return <BlogIndex {...this.state} />;
   }
 }
-
 
 export default BlogIndexContainer;
