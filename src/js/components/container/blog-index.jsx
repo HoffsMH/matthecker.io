@@ -1,32 +1,29 @@
 import React from 'react';
 import _ from 'lodash';
-import { Link } from 'react-router-dom';
+import BlogPostLink from '../view/blog-post-link';
+import BlogIndex from '../view/blog-index';
+import fetchBlogInfo from '../../lib/fetch-blog-info';
 
-class BlogIndex extends React.Component {
+class BlogIndexContainer extends React.Component {
   constructor(props, context) {
     super(props, context);
-    this.state = { gistLinks: [] };
+    this.state = { blogLinks: [] };
   }
+
 
   async componentWillMount() {
-    const response = await fetch('https://api.github.com/users/HoffsMH/gists');
-    const json = await response.json();
-    const gistLinks = _.map(json, gist => (<li><Link key={gist.url} to={gist.url}>{gist.id}</Link></li>));
+    const blogInfo = await fetchBlogInfo();
+    const blogLinks = _.map(blogInfo, blogPost =>
+      (<BlogPostLink key={blogPost.id} {...blogPost} />));
 
-    this.setState({ gistLinks });
+    this.setState({ blogLinks });
   }
 
-
   render() {
-    const { state: { gistLinks } } = this;
-
-    return (
-      <ul>
-        {gistLinks}
-      </ul>
-    );
+    const { state } = this;
+    return <BlogIndex {...state} />;
   }
 }
 
 
-export default BlogIndex;
+export default BlogIndexContainer;

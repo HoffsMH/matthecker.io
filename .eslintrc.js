@@ -3,5 +3,8 @@ module.exports = {
   "globals": {
     "document": true,
     "fetch": true,
+  },
+  "rules": {
+    "react/forbid-prop-types": 0
   }
 };
