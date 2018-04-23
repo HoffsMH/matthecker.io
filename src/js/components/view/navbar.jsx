@@ -5,23 +5,8 @@ const NavBar = () => (
   <nav className="w-20 box-shadow" aria-label="main navigation">
     <ul className="ml-30 mt-20">
       <li>
-        <Link href="/about" to="/about">
-          About
-        </Link>
-      </li>
-      <li>
-        <Link href="/about" to="/about">
-          About
-        </Link>
-      </li>
-      <li>
-        <Link href="/about" to="/about">
-          About
-        </Link>
-      </li>
-      <li>
-        <Link href="/about" to="/about">
-          About
+        <Link href="/" to="/">
+          Posts
         </Link>
       </li>
       <li>

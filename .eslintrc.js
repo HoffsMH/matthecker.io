@@ -5,6 +5,7 @@ module.exports = {
     "fetch": true,
   },
   "rules": {
-    "react/forbid-prop-types": 0
+    "react/forbid-prop-types": 0,
+    "react/prop-types": 0
   }
 };

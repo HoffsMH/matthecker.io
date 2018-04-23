@@ -1,28 +1,29 @@
 import React from 'react';
 import _ from 'lodash';
 import posts from '../../../md/posts';
-import BlogPostLink from '../view/blog-post-link';
-import BlogIndex from '../view/blog-index';
-import fetchBlogInfo from '../../lib/fetch-blog-info';
+import marked from 'marked';
 
 class BlogPostContainer extends React.Component {
-  constructor() {
-    super();
-    this.state = { blogLinks: [] };
+  constructor({ match: { params: { id } } }) {
+    super(...arguments);
+    const post = _.find(posts, post => post.id === id);
+    this.state = { post };
   }
 
-
   async componentWillMount() {
-    const blogInfo = await fetchBlogInfo();
-    const blogLinks = _.map(blogInfo, blogPost =>
-      (<BlogPostLink key={blogPost.id} {...blogPost} />));
-
-    this.setState({ blogLinks });
+    fetch(this.state.post.text)
+      .then(response => response.text())
+      .then(text => this.setState({ text: marked(text) }));
   }
 
   render() {
-    const { state } = this;
-    return <BlogIndex {...state} />;
+    // return (<div>
+    //   hi
+    // </div>);
+    return (
+      <div className="ml-20" dangerouslySetInnerHTML={{__html:this.state.text}}>
+      </div>
+    );
   }
 }
 

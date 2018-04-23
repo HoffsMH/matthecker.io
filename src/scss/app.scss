@@ -6,9 +6,7 @@ $purple: #8A4D76;
 $primary: $purple;
 $reg: 18px;
 
-@import 'bulma';
-
-body, html {
+body, html, {
   @extend .lato;
   font-size: $reg;
   height: 100%;
@@ -17,19 +15,34 @@ body, html {
 }
 
 .hello-card {
-  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: $purple;
+  color: #ffffff;
   min-height: 100vh;
+  text-align: center;
   h1 {
-    text-align: center;
+    a {
+      color: white;  /* Fallback: assume this color ON TOP of image */
+      background: url(https://media.npr.org/assets/img/2017/06/15/istock-182747082-67513e4d2f9afc42710d06a802b9ee140321a3ac-s1600-c85.jpg) no-repeat;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
+}
+
+.slim-bar {
+  height: 5px;
+  background: $purple;
 }
 
 nav {
   min-width: 100px;
 }
 
-.app-container {
-  min-height: 100%;
+.full-height {
+  height: 100%;
 }
 
 @import './partials/helpers';

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const BlogIndex = (props) => {
   const { blogLinks } = props;
-
+  
   return (<ul className="ml-30">{blogLinks}</ul>);
 };
 

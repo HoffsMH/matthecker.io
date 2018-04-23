@@ -3,14 +3,14 @@ import React from 'react';
 
 const BlogPostLink = (props) => {
   const {
-    url,
+    id,
     content,
     created,
     name,
     description
   } = props;
 
-
+  const url = `/posts/${id}`
   return (
     <li>
       <Link href={url} to={url}>{name}</Link>
