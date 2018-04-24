@@ -26,6 +26,7 @@
     "webpack-dev-server": "^3.1.1"
   },
   "dependencies": {
+    "colorthief": "git+ssh://git@github.com:HoffsMH/color-thief.git",
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
     "lodash": "^4.17.5",

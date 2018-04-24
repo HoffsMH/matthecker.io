@@ -1289,10 +1289,6 @@ builtin-status-codes@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
 
-bulma@^0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.7.0.tgz#d480170c8768cb774ff606a5aaf5deaa92cda622"
-
 bytes@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.0.0.tgz#d32815404d689699f85a4ea4fa8755dd13a96048"
@@ -1661,6 +1657,10 @@ colors@^1.1.2:
 colors@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/colors/-/colors-1.1.2.tgz#168a4701756b6a7f51a12ce0c97bfa28c084ed63"
+
+"colorthief@git+ssh://git@github.com:HoffsMH/color-thief.git":
+  version "2.0.2"
+  resolved "git+ssh://git@github.com:HoffsMH/color-thief.git#c0ac3f51a31ea7bdf906301690a86d6510e338b1"
 
 combined-stream@1.0.6, combined-stream@^1.0.5, combined-stream@~1.0.5:
   version "1.0.6"

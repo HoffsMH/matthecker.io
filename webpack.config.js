@@ -61,7 +61,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       template: './src/index.html',
-      chunks: ['index', 'styles'],
+      chunks: ['fetch', 'index', 'styles'],
       filename: 'index.html',
     }),
   ],
