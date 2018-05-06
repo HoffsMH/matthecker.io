@@ -1,8 +1,7 @@
-@import 'modules/variables/color';
-@import 'modules/variables/typography';
-@import 'partials/typography';
+@import 'typography';
 
 $purple: #8A4D76;
+$silver: #DDDDDD;
 $primary: $purple;
 $reg: 18px;
 
@@ -15,21 +14,12 @@ body, html, {
 }
 
 .hello-card {
-  display: flex;
   flex-direction: column;
+  align-content: stretch;
   justify-content: center;
-  background: $purple;
-  color: #ffffff;
-  min-height: 100vh;
   text-align: center;
-  h1 {
-    a {
-      color: white;  /* Fallback: assume this color ON TOP of image */
-      background: url(https://media.npr.org/assets/img/2017/06/15/istock-182747082-67513e4d2f9afc42710d06a802b9ee140321a3ac-s1600-c85.jpg) no-repeat;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
+  padding: 15px;
+  box-sizing: border-box;
 }
 
 .slim-bar {
@@ -37,12 +27,8 @@ body, html, {
   background: $purple;
 }
 
-nav {
-  min-width: 100px;
-}
-
 .full-height {
   height: 100%;
 }
 
-@import './partials/helpers';
+@import 'helpers';
